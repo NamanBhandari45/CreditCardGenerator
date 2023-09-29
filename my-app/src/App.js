@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import CreditCard  from './Components/CreditCard';
 
 function App() {
 const[error,seterror] = useState();
@@ -37,13 +38,20 @@ function handleClick(e){
   if(cardValues.cvc.length === 0){
     seterror(true)
   }
-    console.log(cardValues);
+    
 
   e.preventDefault();
 }
 
   return (
     <div className='container'>
+       <CreditCard  
+          cardNo={cardValues.cardno}
+          name={cardValues.name}
+          mm={cardValues.mm}
+          yy={cardValues.yy}
+          cvc={cardValues.cvc}
+        />
         <div className='left-div'>
         </div>
         <div className='right-div'>

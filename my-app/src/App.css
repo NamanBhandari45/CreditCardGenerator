@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 .container{
     display: flex;
     height: 100vh;
@@ -35,6 +36,7 @@
 }
 
 form{
+    margin-left: 120px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -123,4 +125,90 @@ label{
 
 .cvclabel{
     margin-left: 220px;
+}
+
+/* card component */
+
+.frontCard{
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    height: 230px;
+    width: 400px;
+    background-image: url(../public/bg-card-front.png);
+    border-radius: 10px;
+}
+
+.circle{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: 5%;
+    left: 6%;
+}
+
+.circle2{
+    position: relative;
+    bottom: 8%;
+    left: 19%;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.card-number{
+    position: absolute;
+    top: 52%;
+    left: 7%;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4px;
+}
+
+.cardinfo span{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.47px;
+}
+
+.cardinfo{
+    position: absolute;
+    top: 80%;
+    left: 6%;
+}
+
+.exp{
+    margin-left: 142px;
+}
+
+.backCard{
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    height: 245px;
+    width: 446px;
+    background-image: url(../public/bg-card-back.png);
+}
+
+.cvNo{
+    position: relative;
+    top: 16%;
+    float: right;
+    right: 5%;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3.29px;
 }
