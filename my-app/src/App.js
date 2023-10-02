@@ -75,7 +75,7 @@ function handleClick(e){
             <div className='expdateInput'>
               <input className='inputfield2' name='mm' placeholder='MM'  value={cardValues.mm} onChange={handleChange}></input>
               <input className='inputfield2 YY' name='yy' placeholder='YY'  value={cardValues.yy} onChange={handleChange}></input>
-              <input className='inputfield3 cvcinput' name='cvc' placeholder='e.g. 123'  value={cardValues.cvc} onChange={handleChange}></input>
+              <input  className='inputfield3 cvcinput' type='password' name='cvc' placeholder='e.g. 123'  value={cardValues.cvc} onChange={handleChange}></input>
             </div>
           {error && cardValues.cvc.length <=0 ? <label htmlFor='cvc' className='cvclabel'>CVC must be numeric</label> : ""}
             <button type='submit' onClick={handleClick}>Confirm</button>
