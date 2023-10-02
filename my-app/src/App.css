@@ -167,9 +167,15 @@ label{
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: normal;
     letter-spacing: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .cardinfo span{
@@ -180,6 +186,7 @@ label{
     font-weight: 700;
     line-height: normal;
     letter-spacing: 2.47px;
+    text-transform: uppercase;
 }
 
 .cardinfo{
