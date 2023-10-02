@@ -67,7 +67,7 @@ function handleClick(e){
             {error && cardValues.name.length <= 0 ? <label htmlFor='name'>Cardholder name can't be empty</label> : ""}
             <p className='text'>CARD NUMBER</p>
             <input className='inputfield1' type='number'  name='cardno'  value={cardValues.cardno}  placeholder='e.g. 1234 5678 9123 0000' onChange={handleChange}></input>
-           {error && cardValues.cardno.length <=0 ?  <label htmlFor='cardNo'>Card number must be a 16-digit numeric value</label> : ""}
+           {error && (cardValues.cardno.length <=0  || cardValues.cardno.length !== 16)?  <label htmlFor='cardNo'>Card number must be a 16-digit numeric value</label> : ""}
             <div className='expDate'>
               <span className='text'>EXP.DATE (MM/YY)</span>
               <span className='text cvc'>CVC</span>
