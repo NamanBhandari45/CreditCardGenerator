@@ -5,7 +5,7 @@ import   "../App.css";
 function CreditCard(props){
    
 
-    const defaultCardNo = "0000 0000 0000 0000";
+    const defaultCardNo = "0000000000000000";
     const defaultName = "CARDHOLDER NAME";
     const defaultMM = "MM";
     const defaultYY = "YY";
