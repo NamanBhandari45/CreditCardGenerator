@@ -18,7 +18,7 @@ const [cardValues, setCardValues] = useState({
 
 const handleChange = (e) =>{
   const { name, value } = e.target;
-
+   
     
    setCardValues({
     ...cardValues,
@@ -32,17 +32,24 @@ function handleClick(e){
 
   if(cardValues.name.length === 0){
     seterror(true)
+    
   }
 
-  if(cardValues.cardno.length === 0 && cardValues.cardno.length !== 16){
+  if(cardValues.cardno.length === 0){
     seterror(true)
+   
     
+  }
+  if(cardValues.cardno.length !== 16){
+    seterror(true)
+   
   }
 
   if(cardValues.cvc.length === 0){
     seterror(true)
+    
   }
-  else{
+  else {
     setShowCardDetails(cardValues)
     toast("We've added your card details");
   }
@@ -66,8 +73,8 @@ function handleClick(e){
              <input className='inputfield1' type='text' name='name' placeholder='e.g. Jane Appleseed' onChange={handleChange} value={cardValues.name}></input>
             {error && cardValues.name.length <= 0 ? <label htmlFor='name'>Cardholder name can't be empty</label> : ""}
             <p className='text'>CARD NUMBER</p>
-            <input className='inputfield1' type='number'  name='cardno'  value={cardValues.cardno}  placeholder='e.g. 1234 5678 9123 0000' onChange={handleChange}></input>
-           {error && cardValues.cardno.length <=0 ?  <label htmlFor='cardNo'>Card number must be a 16-digit numeric value</label> : ""}
+            <input className='inputfield1' type='text'  name='cardno'  value={cardValues.cardno}  placeholder='e.g. 1234 5678 9123 0000' onChange={handleChange}></input>
+           {error && (cardValues.cardno.length <=0 || cardValues.cardno.length !== 16) ?  <label htmlFor='cardNo'>Card number must be a 16-digit numeric value</label> : ""}
             <div className='expDate'>
               <span className='text'>EXP.DATE (MM/YY)</span>
               <span className='text cvc'>CVC</span>
@@ -77,7 +84,7 @@ function handleClick(e){
               <input className='inputfield2 YY' name='yy' placeholder='YY'  value={cardValues.yy} onChange={handleChange}></input>
               <input  className='inputfield3 cvcinput' type='password' name='cvc' placeholder='e.g. 123'  value={cardValues.cvc} onChange={handleChange}></input>
             </div>
-          {error && cardValues.cvc.length <=0 ? <label htmlFor='cvc' className='cvclabel'>CVC must be numeric</label> : ""}
+          {error && cardValues.cvc.length <=0 ? <label htmlFor='cvc' className='cvclabel'>CVC must be of 3 digit</label> : ""}
             <button type='submit' onClick={handleClick}>Confirm</button>
             <ToastContainer />
           </form>
